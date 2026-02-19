@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: "http://localhost:5000/api/habit"
+  baseURL: "https://habbit-buddy.onrender.com/api/habit"
 })
