@@ -42,17 +42,16 @@ Key ideas:
 
 ## 🖼️ Screenshots
 
-### 🏠 Home Screen
-![Home Screen](./screenshots/home_screen.png)
+<p align="center">
+  <img src="./screenshots/home_screen.png" width="220" />
+  <img src="./screenshots/adding_habit.png" width="220" />
+  <img src="./screenshots/see_your_habit.png" width="220" />
+  <img src="./screenshots/habit_completed.png" width="220" />
+</p>
 
-### ➕ Adding a Habit
-![Adding Habit](./screenshots/adding_habit.png)
-
-### 👀 View Your Habit
-![See Your Habit](./screenshots/see_your_habit.png)
-
-### ✅ Habit Completed
-![Habit Completed](./screenshots/habit_completed.png)
+<p align="center">
+  <b>Home</b> · <b>Add Habit</b> · <b>View Habit</b> · <b>Completed</b>
+</p>
 
 ---
 
