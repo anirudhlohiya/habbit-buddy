@@ -9,7 +9,7 @@ export default function HabitCard({ habit, setHabit }) {
 
   const checkIn = async () => {
     if (checkedToday) return
-    const res = await api.post("/checkin")
+    const res = await api.post("/checkin", { userId: getUserId() })
     setHabit(res.data)
   }
 

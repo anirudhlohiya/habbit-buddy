@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const habitSchema = new mongoose.Schema({
+    userId: String,
     habitName: String,
     streak: {
         type: Number,

@@ -3,13 +3,16 @@ import api from "./api"
 import HabitForm from "./components/HabitForm"
 import HabitCard from "./components/HabitCard"
 import "./App.css"
+import { getUserId } from "./utils/userId"
+
+const userId = getUserId()
 
 function App() {
   const [habit, setHabit] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    api.get("/")
+    api.get("/", { params: { userId } })
       .then(res => setHabit(res.data))
       .finally(() => setLoading(false))
   }, [])

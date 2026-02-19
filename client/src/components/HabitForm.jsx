@@ -1,12 +1,13 @@
 import { useState } from "react"
 import api from "../api"
+import { getUserId } from "../utils/userId"
 
 export default function HabitForm({ setHabit }) {
   const [name, setName] = useState("")
 
   const submit = async () => {
     if (!name.trim()) return
-    const res = await api.post("/create", { habitName: name })
+    const res = await api.post("/create", { habitName: name, userId: getUserId() })
     setHabit(res.data)
   }
 
