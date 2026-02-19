@@ -1,7 +1,7 @@
 import api from "../api"
+import { getUserId } from "../utils/userId"
 
 export default function HabitCard({ habit, setHabit }) {
-
   const checkedToday =
     habit.lastCheckedDate &&
     new Date(habit.lastCheckedDate).toDateString() ===
@@ -9,7 +9,9 @@ export default function HabitCard({ habit, setHabit }) {
 
   const checkIn = async () => {
     if (checkedToday) return
-    const res = await api.post("/checkin", { userId: getUserId() })
+    const res = await api.post("/checkin", {
+      userId: getUserId()
+    })
     setHabit(res.data)
   }
 
